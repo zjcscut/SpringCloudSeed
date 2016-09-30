@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 /**
  * @author zjc
  * @version 2016/9/29 0:38
- * @description
+ * @description Feign客户端可以直接使用Hystrix
  */
 @SpringBootApplication
 @EnableDiscoveryClient

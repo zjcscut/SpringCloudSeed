@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @version 2016/9/29 0:38
  * @description
  */
-@FeignClient(value = "application-service")  //指定服务的id
+@FeignClient(value = "application-service",fallback = ConsumerClientHystrix.class)  //指定服务的id以及失败回调类
 public interface ConsumerClient {
 
 	@RequestMapping(value = "/add",method = RequestMethod.GET)
