@@ -2,19 +2,19 @@ package cn.zjc;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.config.server.EnableConfigServer;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * @author zjc
- * @version 2016/10/3 20:33
+ * @version 2016/10/5 1:40
  * @description
  */
-@EnableConfigServer
-@EnableDiscoveryClient
+@EnableEurekaServer
 @SpringBootApplication
 public class Application {
 
 	public static void main(String[] args) {
-		new SpringApplicationBuilder(Application.class).web(true).run(args);	}
+		new SpringApplicationBuilder(Application.class).web(true).run(args);
+	}
+
 }
